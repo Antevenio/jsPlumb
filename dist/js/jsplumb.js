@@ -2168,7 +2168,10 @@
 
             },
             removeHelperDragClasses: function () {
-                this.getBody().classList.remove.apply(this, globalVars.dragHelperPosClasses);
+                var self = this;
+                globalVars.dragHelperPosClasses.forEach(function (classToRemove) {
+                    self.getBody().classList.remove(classToRemove);
+                });
             },
             panArea: function (pan) {
                 var scene = globalVars;
