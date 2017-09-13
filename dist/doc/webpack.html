@@ -128,7 +128,7 @@
 <p>jsPlumb can be bundled with Webpack - see <code>/demo/webpack</code> for an example. This page discusses that demonstration.</p>
 
 <h4>package.json</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">{
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>{
   &quot;name&quot;: &quot;jsplumb-webpack-demo&quot;,
   &quot;version&quot;: &quot;1.0.0&quot;,
   &quot;description&quot;: &quot;example of using webpack to bundle jsplumb&quot;,
@@ -148,14 +148,14 @@
 </code></pre></div>
 <p>Note that we reference jsPlumb as a local fie (<code>jsplumb.tgz</code> is the output of <code>npm pack</code>, which creates a local copy of
 what <code>npm publish</code> would post to npm). You can just require jsPlumb as you would any other dependency:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;devDependencies&quot;:{
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>&quot;devDependencies&quot;:{
   &quot;jsplumb&quot;:&quot;2.2.11&quot;
 }
 </code></pre></div>
 <p>2.2.11 is the most current at the time of writing. It may not be now.</p>
 
 <h4>webpack.config.js</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var path = require(&quot;path&quot;);
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>var path = require(&quot;path&quot;);
 var webpack = require(&quot;webpack&quot;);
 module.exports = {
     cache: true,
@@ -173,7 +173,7 @@ module.exports = {
 <h4>Gruntfile.js</h4>
 
 <p>We&#39;re using Grunt for this demo. You don&#39;t have to use Grunt.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">module.exports = function(grunt) {
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>module.exports = function(grunt) {
 
     var webpackConfig = require(&quot;./webpack.config.js&quot;);
 
@@ -190,7 +190,7 @@ module.exports = {
 };
 </code></pre></div>
 <h4>index.js</h4>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var j = require(&quot;./node_modules/jsplumb/dist/js/jsplumb.js&quot;).jsPlumb.getInstance({
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>var j = require(&quot;./node_modules/jsplumb/dist/js/jsplumb.js&quot;).jsPlumb.getInstance({
     Connector: &quot;Flowchart&quot;,
     Anchor: &quot;Bottom&quot;,
     Endpoint: [ &quot;Dot&quot;, { radius: 2 }],
