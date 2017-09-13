@@ -152,7 +152,7 @@
 best to just stick to trusty <code>div</code>. So let&#39;s assume you have a variable <code>foo</code> that references a DIV element.</p>
 
 <p>A simple example, using the defaults:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
   <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;aGroup&quot;</span>
 <span class="p">});</span>
@@ -204,18 +204,18 @@ no other flag prevents this), but may not be dropped onto other Groups.</p></li>
 <h4>Collapsed state</h4>
 
 <p>By default, a Group will initially be rendered in its expanded state. You can request the Group be collapsed initially:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
   <span class="nx">collapsed</span><span class="o">:</span><span class="kc">true</span>
 <span class="p">});</span>
 </code></pre></div>
 <p><a name="removing"></a>
 Groups can be removed with the <code>removeGroup</code> method:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>This will remove the Group with ID <code>aGroup</code>.  If you also wish to remove all of the Group&#39;s child elements you can
 provide a second argument:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 </code></pre></div>
 <hr>
 
@@ -227,7 +227,7 @@ provide a second argument:</p>
  the <code>anchor</code> and <code>endpoint</code> parameters. These take the same values as in the other parts of the API in which they
  appear. For instance, perhaps you want to show a smallish dot that tracks the perimeter of a Group when it is
  collapsed:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
     <span class="nx">el</span><span class="o">:</span><span class="nx">someElement</span><span class="p">,</span>
     <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span>
     <span class="nx">anchor</span><span class="o">:</span><span class="s2">&quot;Continuous&quot;</span><span class="p">,</span>
@@ -235,7 +235,7 @@ provide a second argument:</p>
 <span class="p">});</span>
 </code></pre></div>
 <p>Perhaps you want to show a large rectangle in the top left corner:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
     <span class="nx">el</span><span class="o">:</span><span class="nx">someElement</span><span class="p">,</span>
     <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span>
     <span class="nx">anchor</span><span class="o">:</span><span class="s2">&quot;TopLeft&quot;</span><span class="p">,</span>
@@ -251,7 +251,7 @@ provide a second argument:</p>
 <h3>Adding an element to a Group</h3>
 
 <p>You can add an element to a Group programmatically with the <code>addToGroup(group, el)</code> method:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addToGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span> <span class="nx">someElement</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addToGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">,</span> <span class="nx">someElement</span><span class="p">);</span>
 </code></pre></div>
 <p>If you try to add an element that already belongs to some other Group an exception is thrown.</p>
 
@@ -262,7 +262,7 @@ provide a second argument:</p>
 <h3>Removing an element from a Group</h3>
 
 <p>You can remove an element from a Group programmatically with the <code>removeGromGroup(el)</code> method:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeFromGroup</span><span class="p">(</span><span class="nx">someElement</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeFromGroup</span><span class="p">(</span><span class="nx">someElement</span><span class="p">);</span>
 </code></pre></div>
 <p>Note that you do not need to nominate the Group from which you wish to remove the element. Since an element can belong
 to only one Group at a time, it will simply be removed from the Group. If you call this method with an element that does
@@ -281,7 +281,7 @@ both already discussed above:</p>
 <ul>
 <li>Set <strong>droppable:false</strong> when you create a Group:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
     <span class="nx">el</span><span class="o">:</span><span class="nx">someElement</span><span class="p">,</span>
     <span class="nx">droppable</span><span class="o">:</span><span class="kc">false</span>
 <span class="p">});</span>
@@ -291,7 +291,7 @@ both already discussed above:</p>
 <ul>
 <li>Set <strong>constrain:true</strong> when you create a Group:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span><span class="nx">someElement</span><span class="p">,</span>
   <span class="nx">constrain</span><span class="o">:</span><span class="kc">true</span>
 <span class="p">});</span>
@@ -301,7 +301,7 @@ both already discussed above:</p>
 <ul>
 <li>Set <strong>dropOverride:true</strong> when you create a Group:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addGroup</span><span class="p">({</span>
   <span class="nx">el</span><span class="o">:</span><span class="nx">someElement</span><span class="p">,</span>
   <span class="nx">dropOverride</span><span class="o">:</span><span class="kc">true</span>
 <span class="p">});</span>
@@ -315,7 +315,7 @@ both already discussed above:</p>
 <h3>Collapsing and expanding Groups</h3>
 
 <p>Use <code>collapseGroup</code> and <code>expandGroup</code>:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">collapseGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">collapseGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">);</span>
 
 <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">expandGroup</span><span class="p">(</span><span class="s2">&quot;aGroup&quot;</span><span class="p">);</span>
 </code></pre></div>

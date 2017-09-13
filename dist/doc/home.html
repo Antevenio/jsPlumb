@@ -168,7 +168,7 @@ that support SVG. </p>
 <h6>text/html</h6>
 
 <p>If you&#39;re serving your pages with content type <code>text/html</code>, as most people are, then you should use this doctype:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!doctype html&gt;</span>
 </code></pre></div>
 <p>This gives you Standards mode in all browsers and access to HTML5.</p>
 
@@ -177,7 +177,7 @@ that support SVG. </p>
 <h3>Required Imports</h3>
 
 <p>No required imports. </p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;PATH_TO/jsplumb.min.js &quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;PATH_TO/jsplumb.min.js &quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p><a name="initializing"></a></p>
 
@@ -185,14 +185,14 @@ that support SVG. </p>
 
 <p>You should not start making calls to jsPlumb until the DOM has been initialized - perhaps no surprises there.  To handle 
 this, you should bind to the <code>ready</code> event on jsPlumb (or the instance of jsPlumb you are working with):            </p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;ready&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;ready&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="p">...</span>           
   <span class="c1">// your jsPlumb related init code goes here</span>
   <span class="p">...</span>  
 <span class="p">});</span>
 </code></pre></div>
 <p>There&#39;s a helper method that can save you a few precious characters:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="p">...</span>         
     <span class="c1">// your jsPlumb related init code goes here</span>
     <span class="p">...</span>
@@ -206,11 +206,11 @@ this, you should bind to the <code>ready</code> event on jsPlumb (or the instanc
 
 <p>jsPlumb is registered on the browser&#39;s window by default, providing one static instance for the whole page to use.  You 
 can also instantiate independent instances of jsPlumb, using the <code>getInstance</code> method, for example:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">firstInstance</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kd">var</span> <span class="nx">firstInstance</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
 </code></pre></div>
 <p>The variable <code>firstInstance</code> can now be treated exactly as you would treat the <code>jsPlumb</code> variable - you can set defaults, 
 call the <code>connect</code> method, whatever:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">firstInstance</span><span class="p">.</span><span class="nx">importDefaults</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">firstInstance</span><span class="p">.</span><span class="nx">importDefaults</span><span class="p">({</span>
   <span class="nx">Connector</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;Bezier&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">curviness</span><span class="o">:</span> <span class="mi">150</span> <span class="p">}</span> <span class="p">],</span>
   <span class="nx">Anchors</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;TopCenter&quot;</span><span class="p">,</span> <span class="s2">&quot;BottomCenter&quot;</span> <span class="p">]</span>
 <span class="p">});</span>
@@ -222,7 +222,7 @@ call the <code>connect</code> method, whatever:</p>
 <span class="p">});</span>
 </code></pre></div>
 <p><code>getInstance</code> optionally takes an object that provides the defaults:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">secondInstance</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kd">var</span> <span class="nx">secondInstance</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">({</span>
   <span class="nx">PaintStyle</span><span class="o">:</span><span class="p">{</span> 
     <span class="nx">strokeWidth</span><span class="o">:</span><span class="mi">6</span><span class="p">,</span> 
     <span class="nx">stroke</span><span class="o">:</span><span class="s2">&quot;#567567&quot;</span><span class="p">,</span> 
@@ -272,14 +272,14 @@ jsPlumb to update its references.</p></li>
 
 <p>In the jsPlumb documentation you will see references to the concept of a <code>selector</code>. This is a list of elements that match 
 some CSS spec. In modern browsers you can get one of these via a call like:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="nx">someElement</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.someSelector&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span> <span class="nx">someElement</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.someSelector&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>The native element that <code>querySelectorAll</code> returns is a <code>NodeList</code>. </p>
 
 <p>Although jsPlumb has no dependency on jQuery, it also supports jQuery selectors as arguments for elements (vanilla jsPlumb 
 because jQuery&#39;s selector object is <em>list-like</em>, ie. it has a <code>length</code> property and indexed accessors). So this will 
 also work, if you happen to be using jQuery in your page:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nx">someElement</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.someSelector&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">$</span><span class="p">(</span><span class="nx">someElement</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.someSelector&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h4>Element Ids</h4>
 
@@ -360,7 +360,7 @@ course, it&#39;s a free-for-all - but it will be ignored.</p>
 not just things you&#39;re plumbing together), be careful not to call <code>draggable</code> on the element that is acting as the 
 <code>Container</code> for the current instance, or you will see some odd situations occur when dragging.  It is suggested that 
 the best thing to do if you wish to use jsPlumb to enable dragging on non-plumbed elements is to create a new instance:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nonPlumbing</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kd">var</span> <span class="nx">nonPlumbing</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
 <span class="nx">nonPlumbing</span><span class="p">.</span><span class="nx">draggable</span><span class="p">(</span><span class="s2">&quot;some element&quot;</span><span class="p">);</span>
 </code></pre></div>
 <h5>Some examples</h5>
@@ -368,7 +368,7 @@ the best thing to do if you wish to use jsPlumb to enable dragging on non-plumbe
 <ul>
 <li>Set a container to use as the default container:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setContainer</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">));</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setContainer</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">));</span>
 <span class="p">...</span>
 <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addEndpoint</span><span class="p">(</span><span class="nx">someDiv</span><span class="p">,</span> <span class="p">{</span> <span class="nx">endpoint</span> <span class="nx">options</span> <span class="p">});</span>
 </code></pre></div>
@@ -376,14 +376,14 @@ the best thing to do if you wish to use jsPlumb to enable dragging on non-plumbe
 <li>Set a container to use as the default container, using an element id, and then connect two elements.  The elements 
 created in this example will be children of the element with id &quot;containerId&quot;:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setContainer</span><span class="p">(</span><span class="s2">&quot;containerId&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setContainer</span><span class="p">(</span><span class="s2">&quot;containerId&quot;</span><span class="p">);</span>
 <span class="p">...</span>
 <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">connect</span><span class="p">({</span> <span class="nx">source</span><span class="o">:</span><span class="nx">someDiv</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="nx">someOtherDiv</span> <span class="p">});</span>
 </code></pre></div>
 <ul>
 <li>Get a new instance of jsPlumb and specify the container to use in the constructor params:</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">({</span>
   <span class="nx">Container</span><span class="o">:</span><span class="s2">&quot;foo&quot;</span>
 <span class="p">});</span>
 <span class="p">...</span>
@@ -399,7 +399,7 @@ will use to compute the placement of the artefacts it adds to the DOM, and jsPlu
 <h3>Element Dragging</h3>
 
 <p>A common feature of interfaces using jsPlumb is that the elements are draggable.  You should use <code>jsPlumbInstance.draggable</code> to configure this:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myInstanceOfJsPlumb</span><span class="p">.</span><span class="nx">draggable</span><span class="p">(</span><span class="s2">&quot;elementId&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">myInstanceOfJsPlumb</span><span class="p">.</span><span class="nx">draggable</span><span class="p">(</span><span class="s2">&quot;elementId&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>...because if you don&#39;t, jsPlumb won&#39;t know that an element has been dragged, and it won&#39;t repaint the element.</p>
 
@@ -418,7 +418,7 @@ that jsPlumb runs fastest in Chrome, followed by Safari/Firefox, and then IE bro
 <p>Every <code>connect</code> or <code>addEndpoint</code> call in jsPlumb ordinarily causes a repaint of the associated element, which for many 
 cases is what you want.  But if you are performing some kind of &quot;bulk&quot; operation - like loading data on page load 
 perhaps - it is recommended that you suspend drawing before doing so:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setSuspendDrawing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">setSuspendDrawing</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 <span class="p">...</span>
 <span class="o">-</span> <span class="nx">load</span> <span class="nx">up</span> <span class="nx">all</span> <span class="nx">your</span> <span class="nx">data</span> <span class="nx">here</span> <span class="o">-</span>
 <span class="p">...</span>
@@ -433,10 +433,10 @@ you&#39;re dealing with a lot of Connections on slower browsers.</p>
 <h6>batch</h6>
 
 <p>This function abstracts out the pattern of suspending drawing, doing something, and then re-enabling drawing:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="p">[</span><span class="nx">doNotRepaintAfterwards</span><span class="p">]);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="p">[</span><span class="nx">doNotRepaintAfterwards</span><span class="p">]);</span>
 </code></pre></div>
 <p>Example usage:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// import here</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">connections</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">j</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">connections</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
@@ -444,10 +444,10 @@ you&#39;re dealing with a lot of Connections on slower browsers.</p>
 <span class="p">});</span>
 </code></pre></div>
 <p>Here, we&#39;ve assumed that <code>connections</code> is an array of objects that would be suitable to pass to the <code>connect</code> method, for example:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> <span class="nx">source</span><span class="o">:</span><span class="s2">&quot;someElement&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;someOtherElement&quot;</span> <span class="p">}</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="p">{</span> <span class="nx">source</span><span class="o">:</span><span class="s2">&quot;someElement&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;someOtherElement&quot;</span> <span class="p">}</span>
 </code></pre></div>
 <p>By default, this will run a repaint at the end. But you can suppress that, should you want to:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// import here</span>
 <span class="p">},</span> <span class="kc">true</span><span class="p">);</span>
 </code></pre></div>
