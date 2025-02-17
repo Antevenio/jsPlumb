@@ -1,6 +1,7 @@
 {
   "name": "jsplumb",
-  "version": "2.5.1",
+  "version": "2.5.2",
+  "nvmVersion": "17.5.0",
   "description": "Visual connectivity for webapps",
   "main": "dist/js/jsplumb.js",
   "directories": {
@@ -40,7 +41,6 @@
     "grunt-contrib-qunit": "^0.7.0",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-yuidoc": "0.5.2",
     "grunt-exec": "^1.0.1",
     "grunt-jekyll": "~0.4.1",
     "grunt-qunit-junit": "^0.3.1",
