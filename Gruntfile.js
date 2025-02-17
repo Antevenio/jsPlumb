@@ -354,7 +354,7 @@ module.exports = function(grunt) {
     grunt.registerTask('createTests', _createTests);
     grunt.registerTask('createDemos', _createDemos);
     grunt.registerTask('prepare', _prepareSite);
-    grunt.registerTask("build", [ 'build-src', 'clean:stage', 'prepare', 'copy:site', 'copy:tests', 'copy:js', 'copy:demos', 'copy:external', 'yuidoc', 'createTests', 'createDemos',  'writeIndex', 'jekyll', 'copy:dist', 'clean:stage', 'clean:site', 'exec:npmpack' ]);
+    grunt.registerTask("build", [ 'build-src', 'clean:stage', 'prepare', 'copy:site', 'copy:tests', 'copy:js', 'copy:demos', 'copy:external', 'writeIndex', 'copy:dist', 'clean:stage', 'clean:site' ]);
     grunt.registerTask('build-src', ['clean', 'jshint', 'prepare', 'concat', 'uglify', 'insertVersion' ]);
     grunt.registerTask('default', ['help']);
     grunt.registerTask('build-all', ['qunit', 'build']);
